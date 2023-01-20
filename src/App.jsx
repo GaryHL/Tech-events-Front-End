@@ -1,14 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-
+import "./App.css";
+import Router from "./router/Router";
+// import ThemeProvider from "@mui/material";
+// import ThemeProvider from "@mui/system";
+import { ThemeProvider} from "@mui/material";
+import theme from './config/themeConfig'
 
 function App() {
-
-  return (
-    <div className="App">
-    </div>
-  )
+   return (
+      <ThemeProvider theme={theme}>
+         <div className="App">
+            <Router></Router>
+         </div>
+      </ThemeProvider>
+   );
 }
 
-export default App
+export default App;
