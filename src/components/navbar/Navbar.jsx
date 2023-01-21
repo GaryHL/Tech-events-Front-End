@@ -12,20 +12,27 @@ import LocalActivityOutlinedIcon from "@mui/icons-material/LocalActivityOutlined
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import { useState , useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
 
+   const navigate = useNavigate();
+
     const location = useLocation();
+
     console.log(location.pathname)
 
    const [value, setValue] = useState('home');
+
    const handleChange = (event, newValue) => {
       setValue(newValue);
+      navigate(newValue);
    };
+
    useEffect(() => {
+
     setValue(location.pathname)
+
    }, [location])
    
 
