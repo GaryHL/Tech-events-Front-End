@@ -13,11 +13,13 @@
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.5",
     "@mui/styled-engine-sc": "^5.11.0",
+    "components": "^0.1.0",
     "framer-motion": "^8.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.6.2",
+    "styled": "^1.0.0",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
