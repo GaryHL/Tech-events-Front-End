@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import { Box, Stack, Typography } from "@mui/material";
 import Slider from "../../components/slider/Slider";
+import Recomended from "../../components/recomended/Recomended";
+import Footer from "../../components/footer/Footer";
 
 const Home = () => {
    return (
@@ -10,19 +12,25 @@ const Home = () => {
             <Navbar />
             <Stack
                sx={{
-                   display:"grid",
-                gridTemplateColumns:{xs:'100%', xm:'100%', md:"50% 50%" },
-                mt:'5vh',
-                width:"100%",
-                gap:"16px",
+                  display: "grid",
+                  gridTemplateColumns: {
+                     xs: "100%",
+                     xm: "100%",
+                     md: "50% 50%",
+                  },
+                  mt: "5vh",
+                  width: "100%",
                }}
             >
-               <Box height='320px'>
-                  <Slider />
+               <Box>
+                  <Box
+                     sx={{ height: { xs: "300px", sm: "350px", md: "350px" } }}
+                  >
+                     <Slider />
+                  </Box>
+                  <Recomended />
                </Box>
-               <Box
-                  sx={{ display: { xs: "none", sm: "none", md: "block" } }}
-               >
+               <Box sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
                   <Typography color="basics.white">
                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                      Quae aspernatur nesciunt eum voluptate illo, necessitatibus
@@ -31,6 +39,7 @@ const Home = () => {
                   </Typography>
                </Box>
             </Stack>
+            <Footer />
          </Box>
       </>
    );
