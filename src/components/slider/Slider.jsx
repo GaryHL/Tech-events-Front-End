@@ -34,13 +34,15 @@ const Slider = () => {
    const [itemSelected, setItemSelected] = useState(0);
 
    const handleNext = () => {
+
       if (itemSelected < items.length - 1) {
          setItemSelected(itemSelected + 1);
-      } else {
+      }
+      else {
          setItemSelected(0);
       }
-      console.log("item", itemSelected);
    };
+   
    setTimeout(handleNext, 5000);
 
    return (
