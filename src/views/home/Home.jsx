@@ -39,8 +39,8 @@ const Home = () => {
                   </Typography>
                </Box>
             </Stack>
-            <Footer />
          </Box>
+            <Footer />
       </>
    );
 };
