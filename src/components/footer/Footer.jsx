@@ -1,9 +1,5 @@
 import React from "react";
-import {
-   BottomNavigation,
-   BottomNavigationAction,
-   Box,
-} from "@mui/material";
+import { BottomNavigation, BottomNavigationAction, Box } from "@mui/material";
 import CottageOutlinedIcon from "@mui/icons-material/CottageOutlined";
 import LocalActivityOutlinedIcon from "@mui/icons-material/LocalActivityOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
@@ -13,22 +9,19 @@ import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Footer = () => {
-
-    const navigate = useNavigate();
+   const navigate = useNavigate();
 
    const location = useLocation();
 
    const [value, setValue] = useState("home");
-   
+
    const handleChange = (event, newValue) => {
       setValue(newValue);
       navigate(newValue);
    };
 
    useEffect(() => {
-
       setValue(location.pathname);
-      
    }, [location]);
 
    return (
@@ -38,8 +31,9 @@ const Footer = () => {
             position: "absolute",
             bottom: "0",
             mb: "3vh",
-            width:'95%',
-            px:'5%'
+            width: "90%",
+            px: "5%",
+            display: { xs: "block", sm: "block", md: "none" },
          }}
       >
          <BottomNavigation
@@ -48,19 +42,20 @@ const Footer = () => {
             sx={{
                backgroundColor: "transparent",
                color: "white",
-               gap: "10px",
             }}
          >
-               <BottomNavigationAction
-                  sx={{
-                     color: "white",
-                     width: "20px",
-                     display: { xs: "block", sm: "block", md: "none" },
-                  }}
-                  label="Inicio_"
-                  value="/home"
-                  icon={<CottageOutlinedIcon />}
-               />
+            <BottomNavigationAction
+               sx={{
+                  color: "white",
+                  width: "20px",
+                  display: { xs: "block", sm: "block", md: "none" },
+                  display: "flex",
+                  flexDirection: "column",
+               }}
+               label="Inicio"
+               value="/home"
+               icon={<CottageOutlinedIcon />}
+            />
 
             <BottomNavigationAction
                sx={{
