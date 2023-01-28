@@ -62,6 +62,7 @@ const Footer = () => {
                   color: "white",
                   width: "20px",
                   display: { xs: "block", sm: "block", md: "none" },
+
                   display: "flex",
                   flexDirection: "column",
                }}
