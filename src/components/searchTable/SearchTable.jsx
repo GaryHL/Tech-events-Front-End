@@ -5,7 +5,7 @@ import { Paper, IconButton } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { styled } from "@mui/material";
 import CardEvent from "../cardEvent/CardEvent";
-import {TransitionGroup} from '@mui'
+// import { TransitionGroup } from "@mui/material";
 
 const SearchInput = styled("input")({
    outline: "none",
@@ -56,12 +56,13 @@ const SearchTable = () => {
                onChange={(e) => setSearchTerm(e.target.value)}
             />
          </Paper>
-         <TransitionGroup
-         <CardEvent/>
-         <CardEvent/>
-         <CardEvent/>
-         <CardEvent/>
-         <CardEvent/>
+         <CardEvent />
+         {/* <TransitionGroup>
+            <CardEvent />
+            <CardEvent />
+            <CardEvent />
+            <CardEvent />
+         </TransitionGroup> */}
       </>
    );
 };
