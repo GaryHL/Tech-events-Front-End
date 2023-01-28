@@ -62,6 +62,9 @@ const Footer = () => {
                   color: "white",
                   width: "20px",
                   display: { xs: "block", sm: "block", md: "none" },
+
+                  display: "flex",
+                  flexDirection: "column",
                }}
                label="Tickets"
                value="/tickets"
@@ -72,6 +75,8 @@ const Footer = () => {
                   color: "white",
                   width: "20px",
                   display: { xs: "block", sm: "block", md: "none" },
+                  display: "flex",
+                  flexDirection: "column",
                }}
                label="Search"
                value="/search"
@@ -82,6 +87,8 @@ const Footer = () => {
                   color: "white",
                   width: "20px",
                   display: { xs: "block", sm: "block", md: "none" },
+                  display: "flex",
+                  flexDirection: "column",
                }}
                label="account"
                value="/account"
