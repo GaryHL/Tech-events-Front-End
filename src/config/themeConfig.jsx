@@ -10,6 +10,7 @@ const theme = createTheme({
       },
       basics:{
         backgroundLigth: '#111111',
+        gray:'#444444',
         background:'#0D0D0D',
         white:'#fff',
       },
